@@ -4,9 +4,8 @@ Ascenda Enterprise Capital internal dashboard and portals. Static HTML, no build
 
 | File | What it is |
 |---|---|
-| `index.html` | Command Center (private ops dashboard: revenue, investors, mentorship, broker balances, TradeLocker live P&L, notes) |
+| `index.html` | **Client portal** (front page): personal welcome, account value chart, signals, statements, documents, messages, onboarding. Demo mode with sample data. |
 | `aec-portal.html` | Investor Portal (sign-in against the `aec-portal-api` Worker; statements and documents) |
-| `client-portal.html` | **New client-facing portal** (personal welcome, account value chart, signals, statements, documents, messages, onboarding). Demo mode with sample data. |
 | `trading-portal.html` | Private-client trading portal prototype (signals, positions, statements, onboarding). **Sample data only.** |
 
 Linked pages not in this repo yet: `aec-quant-system.html`, `aec-performance.html`.
@@ -27,3 +26,5 @@ Open `index.html` in a browser, or `python3 -m http.server` and visit `localhost
 1. Repo is private. Nothing sensitive is written in page code: balances are typed in at runtime and live only in that browser's local storage.
 2. For a real login in front of the Command Center, host it on Cloudflare Pages behind Cloudflare Access (email one-time code, free for a small team). Then the page is not reachable without passing that login.
 3. Anything shared with clients (investor portal, trading portal) must load data from an authenticated API, never from static files.
+
+The old owner-only Command Center is no longer in this repo. Keep any private owner dashboard in a private repo.
